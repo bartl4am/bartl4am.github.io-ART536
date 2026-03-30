@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a-scence>
+        <a-assets>
+            <a-mixin id="wall" geometry="primitive: box; width: 2; height: 5; depth: 0.3"></a-mixin>
+            <a-mixin id="column" geometry="primitive: cylinder; height: 5; radius: 0.5"></a-mixin>
+            <a-mixin id="primary" material="color: white"></a-mixin>
+            <a-mixin id="primary" material="color: gray"></a-mixin>
+
+        </a-assets>
+        <a-entity mixin="wall primary" position="0 0 -5" geometry="width: 10"></a-entity>
+        <a-entity mixin="wall primary" position="0 0 -5" geometry="width: 10"></a-entity>
+    </a-scence>
+</body>
+</html>
