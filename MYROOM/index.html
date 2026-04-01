@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Room!</title>
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-blink-controls/dist/aframe-blink-controls.min.js"></script>
 </head>
 <body>
    <a-scene>
@@ -18,6 +20,14 @@
             <img id="#plywood" src="../assets/src/textures/plywood_ao_1k.png" alt="">
         </a-assets>
 
+        <a-entity id="player" position="0 1.6 0">
+            <!-- camera -->
+            <a-entity id="camera" camera wasd-controls look-controls></a-entity>
+            <!-- hand controls -->
+            <a-entity id="left-hand" raycaster="objects: .floor" oculus-touch-controls="hand: left" blink-controls></a-entity>
+            <a-entity id="right-hand" raycaster="objects: .floor" oculus-touch-controls="hand: right" blink-controls></a-entity>
+        </a-entity>
+
         <a-sky color="#F2F2F2"></a-sky>
        
        <!--floor-->
@@ -26,7 +36,9 @@
             position="0 0 0"
             width="3.9"
             height="2.78"
-            color="#7A6654">
+            color="#7A6654"
+            static-body="shape: plane"
+            class="floor">
         </a-plane>
 
          <!--ceiling-->
