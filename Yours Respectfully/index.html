@@ -8,13 +8,21 @@
 </head>
 
 <body>
+
+
+    <a-scene>
+        <a-assets>
+            <img id="mycoolwall" src="../assets/src/textures/mycoolwall1.png" alt="">
+            <img id="darkwood" src="../assets/src/textures/dark_wood_diff_1k.jpg" alt="">
+        </a-assets>
 <!-- floor -->
         <a-plane
             width="6.7"
             height="14.6"
             depth="2"
-            rotation="90 0 0"
+            rotation="-90 0 0"
             static-body="shape: plane"
+            material="color: brown; src: #darkwood"
             class="floor">
         </a-plane>
 
@@ -24,13 +32,22 @@
             height="3"
             depth="2"
             rotation="0 90 0"
-
+            position="0 0 0"
+            color="brown"
             static-body="shape: plane"
             ></a-plane>
 
+    <!-- transition wall 1 -->
+        <a-plane 
+            width="6.7" 
+            height="3" 
+            rotation="0 180 0" 
+            position="0 1.5 7.30165" 
+            material="color: white; src: #mycoolwall">
+        </a-plane>
 
 
 
-
+</a-scene>
 </body>
 </html>
