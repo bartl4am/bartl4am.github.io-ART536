@@ -14,6 +14,13 @@
         <a-assets>
             <img id="mycoolwall" src="../assets/src/textures/mycoolwall1.png" alt="">
             <img id="darkwood" src="../assets/src/textures/dark_wood_diff_1k.jpg" alt="">
+            <img id="openingwall" src="../assets/src/textures/WALL DESIGNS/WALL DESIGNS-02.png" alt="">
+            <img id="biographywall" src="../assets/src/textures/WALL DESIGNS/WALL DESIGNS-03.png" alt="">
+            <img id="summarywall" src="../assets/src/textures/WALL DESIGNS/WALL DESIGNS-04.png" alt="">
+            <img id="educationwall" src="../assets/src/textures/WALL DESIGNS/WALL DESIGNS-05.png" alt="">
+            <img id="marriagewall" src="../assets/src/textures/WALL DESIGNS/WALL DESIGNS-06.png" alt="">
+            <img id="societywall" src="../assets/src/textures/WALL DESIGNS/WALL DESIGNS-07.png" alt="">
+            <img id="quotewall" src="../assets/src/textures/WALL DESIGNS/WALL DESIGNS-08.png" alt="">
         </a-assets>
 <!-- floor -->
         <a-plane
@@ -27,17 +34,21 @@
         </a-plane>
 
 <!-- opening wall -->
-        <a-plane
-            width="2.4"
-            height="3"
-            depth="2"
-            rotation="0 90 0"
-            position="0 0 0"
-            color="brown"
-            static-body="shape: plane"
-            ></a-plane>
+      <a-box 
+      width="2.4" 
+      height="3" 
+      depth="2" 
+      rotation="0 360 0" 
+      position="-1.50718 1.5 0.77656" 
+      color="brown" 
+      material="color: white; src: #openingwall" 
+      static-body="shape: box" 
+      geometry="depth: 0.3"></a-box>
 
-    <!-- transition wall 1 -->
+<!-- wall covering -->
+
+
+<!-- transition wall 1 -->  
         <a-plane 
             width="6.7" 
             height="3" 
@@ -46,7 +57,35 @@
             material="color: white; src: #mycoolwall">
         </a-plane>
 
+<!-- transition wall 2 -->  
+        <a-plane 
+            width="6.7" 
+            height="3" 
+            rotation="0 360 0" 
+            position="0 1.5 -7.292" 
+            material="color: white; src: #mycoolwall">
+        </a-plane>
 
+<!-- biography wall -->
+        <a-box 
+            height="3" 
+            width="4.6" 
+            rotation="0 90 0" 
+            position="-0.15692 1.5 -1.373"  
+            geometry="depth: 0.3"
+            material="src: #biographywall">
+        </a-box>
+
+<!-- summary wall -->
+        <a-box 
+        width="14.6" 
+        height="3" 
+        depth="2" 
+        rotation="0 90 0" 
+        position="3.49377 1.5 0" 
+        geometry="depth: 0.3" 
+        material="src: #summarywall">
+        </a-box>
 
 </a-scene>
 </body>
